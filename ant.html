@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .accordion 
+            {
+              background-color: #eee;
+              color: #444;
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 15px;
+              transition: 0.4s;
+            }
+
+            .active, .accordion:hover 
+            {
+              background-color: #ccc;
+            }
+
+            .accordion:after 
+            {
+              content: '\002B';
+              color: #777;
+              font-weight: bold;
+              float: right;
+              margin-left: 5px;
+            }
+
+            .active:after 
+            {
+              content: "\2212";
+            }
+
+            .panel 
+            {
+              padding: 0 18px;
+              background-color: white;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Apache ANT</h2>
+        <p>This page contains QnA on Apache Ant from TutorialsPoint.com</p>
+        
+        <button class="accordion">What is Ant and why is it used?</button>
+        <div class="panel">
+          <p>Ant is a java based <b>build tool</b> developed by Apache for the purpose of automating the build and deployment process.</p>
+        </div>
+
+        <button class="accordion">What is the full form of ANT?</button>
+        <div class="panel">
+          <p>Another Neat Tool</p>
+        </div>
+
+        <button class="accordion">What is the need of automated build and deployment tool?</button>
+        <div class="panel">
+          Following are the activities that are done by a developer manually after writing the application code:-<br>
+          <ol>
+              <li>Compiling the application code</li>
+              <li>Packaging the binaries (class files)</li>
+              <li>Deploying the packaged binaries to <b>test</b> server. (Note that this is not the PROD server)</li>
+              <li>Testing the application code on the test server</li>
+              <li>Copying the application code from test server to the prod server.</li>
+          </ol>
+          All of the above activities were done by the developer manually onne after the other. With automated build and deployment tool like Apache Ant, there is no further need to do all these steps manually.
+        </div>
+        
+        <button class="accordion">How to set up Ant in macbook?</button>
+        <div class="panel">
+          Follow the steps below:-<br><br>
+              1. Goto website <a href="https://ant.apache.org/">https://ant.apache.org/</a><br><br>
+              2. Click on the link to download Ant in binary form "https://ant.apache.org/bindownload.cgi." <br><br>
+                 <img src="/Users/ngksh/myGitHubRepo/this_is_ant_repo/apache-ant/images/image1.png" width="800" height="500"><br><br>
+              3. Click on tar.gz link (since you are using macbook).<br><br>
+                 <img src="/Users/ngksh/myGitHubRepo/this_is_ant_repo/apache-ant/images/image2.png" width="600" height="200"><br><br>
+              4. Tarred (zipped) file gets downloaded onto your macbook.<br><br>
+                 <img src="/Users/ngksh/myGitHubRepo/this_is_ant_repo/apache-ant/images/image3.png" width="600" height="200"><br><br>
+              5. Double click on the tarred file to extract it. You get a ant folder.<br><br>
+                 <img src="/Users/ngksh/myGitHubRepo/this_is_ant_repo/apache-ant/images/image4.png" width="600" height="400"><br><br>
+              6. Open terminal and run the command:- <b>export ANT_HOME=/Users/ngksh/Downloads/apache-ant-1.9.14</b> where "/Users/ngksh/Downloads/apache-ant-1.9.14" denotes the path to the extracted folder in step 5.<br><br>
+              7. Run command:- <b>export PATH=${PATH}:${ANT_HOME}/bin</b>. Note that "bin" folder is present within the extracted folder.<br><br>
+              8. Run command:- <b>ant -version</b>. You should see the version of ant installed on your macbook.<br><br>
+                 <img src="/Users/ngksh/myGitHubRepo/this_is_ant_repo/apache-ant/images/image5.png" width="600" height="100"><br>
+        </div>
+        
+        <button class="accordion">What should be the default name of Ant's build file as per convention?</button>
+        <div class="panel">
+          <b>build.xml</b>
+        </div>
+        
+        <button class="accordion">What are the two conventions/best practises related to Ant's build file?</button>
+        <div class="panel">
+          1. Ant's build file should be named <b>build.xml</b> <br><br>
+          2. Ant's build file should be present in the base directory of the project.    
+        </div>
+        
+        <button class="accordion">Is it mandatory to follow the conventions mentioned above?</button>
+        <div class="panel">
+          No, the above 2 are the best practises and it is <b>NOT</b> mandatory to follow these conventions.    
+        </div>
+        
+        <button class="accordion">Write most basic/elementary Ant's build file?</button>
+        <div class="panel">
+          <br>
+          <img src="/Users/ngksh/myGitHubRepo/this_is_ant_repo/apache-ant/images/image6.png" width="600" height="200">
+          <br>
+        </div>
+
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+
+    </body>
+</html>
