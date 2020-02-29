@@ -49,7 +49,7 @@
     <body>
 
         <h2>Apache ANT</h2>
-        <p>This page contains QnA on Apache Ant from TutorialsPoint.com</p>
+        <p>This page contains QnA on Apache Ant from <a href="https://www.tutorialspoint.com/ant/index.htm">TutorialsPoint.com</a></p>
         
         <button class="accordion">What is Ant and why is it used?</button>
         <div class="panel">
@@ -112,6 +112,152 @@
         <div class="panel">
           <br>
           <img src="https://user-images.githubusercontent.com/46277388/75553396-53592c00-5a5e-11ea-892e-5c93223e4854.png" width="600" height="200">
+          <br>
+        </div>
+        
+        <button class="accordion">How to run Ant's build file?</button>
+        <div class="panel">
+          <br>
+          1. Save Ant's build file (with xml extension). As per the industry convention, the name of Ant's build file should be "build.xml".<br><br>
+          2. Open terminal.<br><br>
+          3. Navigate to the path where you have saved the Ant's build file.<br><br>
+          4. Type the following command to run the Ant's build file:-<br>
+             <b>ant</b><br><br>
+             When you type the command <b>ant</b> on terminal, the system starts searching for the file with name "build.xml" in the path where the command was executed. When the file is found, the instructions written within the file are executed.<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75555479-4e967700-5a62-11ea-8984-0fda5c0e1608.png" width="600" height="400">
+          <br>
+        </div>
+        
+        <button class="accordion">How to run Ant's build file when not saved with the connventional name build.xml?</button>
+        <div class="panel">
+          <br>
+            TBD <a href="https://ant.apache.org/manual/">Link</a><br>
+          <br>
+        </div>
+        
+        <button class="accordion">What are the two basic pre-requisites for Ant's build file?</button>
+        <div class="panel">
+          <br>
+          Ant's build file should have atleast one <b>project tag</b> and one <b>target tag</b><br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75553396-53592c00-5a5e-11ea-892e-5c93223e4854.png" width="600" height="200">
+        </div>
+        
+        <button class="accordion">FIB: A project is a collection of ___________ which itself is a collection of __________ </button>
+        <div class="panel">
+          <br>
+            targets, tasks<br><br>
+            <b>Note:-</b> This means that a project tag is a collection of multiple target tags and a target tag is a collection of multiple task tags provided by Ant. <a href="https://ant.apache.org/manual/">Reference</a><br>
+          <br>    
+        </div>
+        
+        <button class="accordion">Can Ant build file contain multiple projects i.e multiple project tags? </button>
+        <div class="panel">
+          <br>
+            TBD<br>
+          <br>    
+        </div>
+        
+        <button class="accordion">What are the three attributes provided by Ant for project tag?</button>
+        <div class="panel">
+          <br>
+          <b>name</b>:- This attribute is marked as optional by Ant for project tag. Its value can be any user defined string.<br><br>
+          <b>default</b>:- This attribute is marked as mandatory by Ant for project tag. Its value should be same as the name of any one target tag present in the build file.<br><br>
+          <b>basedir</b>:- This attribute is marked as optional by Ant for project tag. Its value should be the path of the projects base directory.<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75553396-53592c00-5a5e-11ea-892e-5c93223e4854.png" width="600" height="200">
+        </div>
+        
+        <button class="accordion">What are the five attributes provided by Ant for target tag?</button>
+        <div class="panel">
+          <br>
+          <b>name</b>:- This attribute is marked as mandatory by Ant for target tag. Its value can be any user defined string.<br><br>
+          <b>description</b>:- This attribute is marked as optional by Ant for target tag. Its value can be any user defined string.<br><br>
+          <b>depends</b>:- This attribute is marked as optional by Ant for target tag. Its value should be a comma-separated list of names of targets on which this target depends.<br><br>
+          <b>if</b>:- This attribute is marked as optional by Ant for target tag. Its value should be name of a property (user created property/inbuilt Ant property). The tasks written within the target get executed only if the value of the property is set<br><br>
+          <b>unless</b>:- This attribute is marked as optional by Ant for target tag. Its value should be name of a property (user created property/inbuilt Ant property). The tasks written within the target get executed only if the value of the property is not set   <br><br>
+        </div>
+        
+        <button class="accordion">FIB: ______ task is used to display message on the console.</button>
+        <div class="panel">
+          <br>
+          &lt;echo&gt;&lt;/echo&gt;<br><br>
+        </div>
+        
+        <button class="accordion">Give an important property of targets?</button>
+        <div class="panel">
+          <br>
+          Targets can have dependencies on other targets. For example, a deploy target may have a dependency on the package target, the package target may have a dependency on the compile target and so forth. Dependencies are denoted using the depends attribute.<br>
+          <br>
+        </div>
+        
+        <button class="accordion">The "default" attribute for project tag is made mandatory by Ant. Does the compilation of Ant build file fails in case default is not specified as attribute in project tag?</button>
+        <div class="panel">
+          <br>
+          No, the compilation of Ant build file does not fail if the "default" attribute is not specified in the project tag.<br>
+          <br>
+        </div>
+        
+        <button class="accordion"><b>Follow up question:-</b> If the compilation of Ant buildd file does not fail when the mandatory attribute for project tag "default" is not specified, then which target is picked up first for execution? Are the targets present in the build file executed sequentially?</button>
+        <div class="panel">
+          <br>
+          No target gets picked up for execution in case the default attribute.<br>
+          <br>
+          Ant build file:-<br><br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75601978-d8882380-5ae6-11ea-9f13-4eeb0e954011.png" width="400" height="300"><br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75602020-43395f00-5ae7-11ea-94ed-f1b7a273b417.png" width="600" height="200"><br>
+          <br>
+        </div>
+        
+        <button class="accordion">What happens when attribute default is present in the project tag but the value of default attribute does not match with the name of any targets present in the build file? Is the compilation error reported?</button>
+        <div class="panel">
+          <br>
+          Yes, in case when the value of default attribute does not match with the name of any target present in the build file, compilation error occurs.<br>
+          <br>
+          Ant build file:-<br><br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75602118-3701d180-5ae8-11ea-8da4-4797174af12c.png" width="400" height="300"><br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75602134-6284bc00-5ae8-11ea-99aa-ac8d6a11dd68.png" width="600" height="200"><br>
+          <br>
+        </div>
+        
+        <button class="accordion">What happens when attribute default is present in the project tag but the value of default attribute is empty/null? Is the compilation error reported?</button>
+        <div class="panel">
+          <br>
+          No, the build is successful but no target gets executed.<br>
+          <br>
+          Ant build file:-<br><br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75602213-138b5680-5ae9-11ea-9ed3-821aa52fa7b4.png" width="400" height="300"><br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75602234-3fa6d780-5ae9-11ea-9b77-d70ebdd57765.png" width="600" height="200"><br>
+          <br>
+        </div>
+        
+        <button class="accordion">Lets say there are 4 targets in the Ant build file and no target is dependant on any other target. The project tag has the value of default attribute same as one of the targets present in the build file? What would be the sequence of execution of targets present in the build file?</button>
+        <div class="panel">
+          <br>
+          Only the target whose name is specified as the value of default attribute of project tag gets executed. Rest of the targets though present in the file do not get executed.<br>
+          <br>
+          Ant build file:-<br><br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75602345-41bd6600-5aea-11ea-9930-1240ae0dd8b4.png" width="400" height="300"><br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75602357-69143300-5aea-11ea-963a-9654e8795e5d.png" width="600" height="200"><br>
+          <br>
+        </div>
+        
+        <button class="accordion">What would be the output when the following Ant build file is compiled?<br>
+            <br>
+            <img src="https://user-images.githubusercontent.com/46277388/75602493-dd030b00-5aeb-11ea-89cf-a7c9dd6ae653.png" width="400" height="300"><br>
+        </button>
+        <div class="panel">
+          <br>
+          Only target C gets executed. Targets A, B and D do not get executed since they are dependant on target C, target C is not dependant on A, B or D. Had target C been dependant on target A, B or D, then these targets would have executed before target C.<br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75602551-6ca8b980-5aec-11ea-9349-3cc7353ccd76.png" width="600" height="200"><br>
           <br>
         </div>
 
