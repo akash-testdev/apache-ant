@@ -346,6 +346,111 @@
           &lt;property name="age" value="28" /&gt;    
           <br>
         </div>
+        
+        <button class="accordion">What are the two types of Ant properties?</button>
+        <div class="panel">
+          <br>
+          1. Inbuilt properties (inbuilt variables)<br>
+          2. User defined properties (user defined variables) <br>   
+          <br>
+        </div>
+        
+        <button class="accordion">Give few examples of inbuilt Ant properties/variables?</button>
+        <div class="panel">
+          <br>
+          ant.project.name<br>
+          ant.version<br>
+          ant.home<br>    
+          <br>
+        </div>
+        
+        <button class="accordion">What are properties in general?</button>
+        <div class="panel">
+          <br>
+          Properties are key value pairs<br>
+          <br>
+        </div>
+        
+        <button class="accordion">Why do we need ant properties?</button>
+        <div class="panel">
+          <br>
+          To provide shortcuts for strings that are used repeatedly inside a build file<br>
+          <br>
+        </div>
+        
+        <button class="accordion">How can we get the value of a key at runtime in Ant?</button>
+        <div class="panel">
+          <br>
+          Using ${key}<br>
+          Apache Ant tries to expand ${key} to value at run time.    
+          <br>
+        </div>
+        
+        <button class="accordion">What are the 3 ways of setting properties in ant?</button>
+        <div class="panel">
+          <br>
+          1. In the ant's build file<br>
+          2. In external properties file<br>
+          3. At the command line while trigerring the ant build file<br>    
+          <br>
+        </div>
+        
+        <button class="accordion">Write a sample Ant build file demonstrating how to set and get properties in the ant build file?</button>
+        <div class="panel">
+          <br>
+          Sample Ant Build File (containing both inbuilt and user defined Ant properties):-<br>
+          <br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75694720-0334d080-5ccf-11ea-92b6-895e1344627d.png" width="600" height="200"><br>
+          <br>
+          Execution Result:-<br>
+          <br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75694869-38d9b980-5ccf-11ea-90d6-656cdb585edd.png" width="600" height="200">      
+          <br>
+        </div>
+        
+        <button class="accordion">Write a sample Ant build file demonstrating how to set and get properties using external properties file?</button>
+        <div class="panel">
+          <br>
+          Sample Ant Build File:-<br>
+          <br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75699970-5c086700-5cd7-11ea-80f8-6d7fbd6d1c7e.png" width="600" height="200"><br>
+          <br>
+          Sample external properties file:-<br>
+          <br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75700088-8823e800-5cd7-11ea-929f-581e96988e31.png" width="600" height="200"><br>
+          <br>    
+          Execution Result:-<br>
+          <br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75698620-08951980-5cd5-11ea-9703-b87b13883836.png" width="600" height="200">      
+          <br>
+        </div>
+        
+        <button class="accordion">Write a sample Ant build file demonstrating how to set and get properties at the command line while trigerring the ant build file?</button>
+        <div class="panel">
+          <br>
+          Sample Ant Build File:-<br>
+          <br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75701104-2795aa80-5cd9-11ea-8716-f16212bbb5e5.png" width="600" height="200"><br>
+          <br>
+          Execution Command and Result:-<br>
+          <br>    
+          <img src="https://user-images.githubusercontent.com/46277388/75701182-53189500-5cd9-11ea-82e3-5d3779b61551.png" width="600" height="200">      
+          <br>
+        </div>
+        
+        <button class="accordion">Lets say there is a preperty which is set at all the 3 places, at command line, at external properties file and in the ant's builld file. The value of the property is different at different places. What would be the order of preference in such a case. Showcase with example?</button>
+        <div class="panel">
+          <br>
+          TBU    
+          <br>
+        </div>
+        
+        <button class="accordion">What happens when we try to get value of a property which does not exist?</button>
+        <div class="panel">
+          <br>
+          TBU    
+          <br>
+        </div>
 
         <script>
         var acc = document.getElementsByClassName("accordion");
