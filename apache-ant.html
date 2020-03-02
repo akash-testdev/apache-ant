@@ -260,6 +260,92 @@
           <img src="https://user-images.githubusercontent.com/46277388/75602551-6ca8b980-5aec-11ea-9349-3cc7353ccd76.png" width="600" height="200"><br>
           <br>
         </div>
+        
+        <button class="accordion">What would be the output when the following Ant build file is compiled?<br>
+            <br>
+            <img src="https://user-images.githubusercontent.com/46277388/75602878-40db0300-5aef-11ea-8e33-6d26ca202404.png" width="400" height="300"><br>
+        </button>
+        <div class="panel">
+          <br>
+          Target B gets executed first, followed by targets A, D and finally C.<br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75602904-90b9ca00-5aef-11ea-8ebc-5e5bd020ca8a.png" width="600" height="200"><br>
+          <br>
+        </div>
+        
+        <button class="accordion">What would be the output when the following Ant build file is compiled?<br>
+            <br>
+            <img src="https://user-images.githubusercontent.com/46277388/75602989-687e9b00-5af0-11ea-9127-c61b2cdc9c20.png" width="400" height="300"><br>
+        </button>
+        <div class="panel">
+          <br>
+          Target B gets executed first, followed by targets D, A and finally C.<br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75603036-aed3fa00-5af0-11ea-9fce-c51f0e12a079.png" width="600" height="200"><br>
+          <br>
+        </div>
+        
+        <button class="accordion">What would be the output when the following Ant build file is compiled?<br>
+            <br>
+            <img src="https://user-images.githubusercontent.com/46277388/75604390-31af8180-5afe-11ea-912a-713bb97e51f3.png" width="400" height="300"><br>
+        </button>
+        <div class="panel">
+          <br>
+          Target D gets executed first, followed by target B, then A and finally C. Note that although both targets B and A depend on target D, target D does not get executed twice.<br>
+          <br>
+          Execution:-<br><br>
+          <img src="https://user-images.githubusercontent.com/46277388/75604415-8a7f1a00-5afe-11ea-903a-8317fb7c56da.png" width="600" height="200"><br>
+          <br>
+        </div>
+        
+        <button class="accordion"><b>FIB:-</b>A __________ is a collection of ________ which itself is a collection of __________</button>
+        <div class="panel">
+          <br>
+          project, targets, tasks<br>
+          <br>
+        </div>
+        
+        <button class="accordion">Give an example of an Ant task</button>
+        <div class="panel">
+          <br>
+          echo task - Used to display text to console/file<br>
+          input task - Used to collect input from console from the user.<br>
+          sound task - Used to play sound after the Ant build file finishes compilation. <br><br>
+          You can view the complete list of tasks provided by Ant on their website <a href="https://ant.apache.org/manual/">here</a>. Select "Ant Tasks" &gt; Overview of Ant Tasks. <br>
+          <br>
+        </div>
+        
+        <button class="accordion">Tasks are embedded/enclosed within _________ </button>
+        <div class="panel">
+          <br>
+          targets<br>   
+          <br>
+        </div>
+        
+        <button class="accordion"><b>FIB:-</b>Ant build files are written in ________ </button>
+        <div class="panel">
+          <br>
+          XML<br>
+          <br>
+        </div>
+        
+        <button class="accordion">Is it possible to declare variables in a XML file? </button>
+        <div class="panel">
+          <br>
+          No<br>
+          <br>
+        </div>
+        
+        <button class="accordion">How does Ant support the concept of declaring variables given that Ant build files are XML files? </button>
+        <div class="panel">
+          <br>
+          Ant build files even though being written in XML support the concept of declaring variables using the property tag. Example<br>
+          <br>    
+          &lt;property name="age" value="28" /&gt;    
+          <br>
+        </div>
 
         <script>
         var acc = document.getElementsByClassName("accordion");
